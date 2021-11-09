@@ -22,15 +22,15 @@ app.listen(
     () => console.log(`Server is running on port ${PORT}`)
 )
 
-app.get("/accounts", (req, res) => {
+app.get("/api/accounts", (req, res) => {
     res.status(200).send(accountsJson)
 });
 
-app.get("/transaction", (req, res) => {
+app.get("/api/transaction", (req, res) => {
     res.status(200).send(transactionsJson)
 });
 
-app.post("/transaction", urlencodedParser, (req, res) => {
+app.post("/api/transaction", urlencodedParser, (req, res) => {
 
     const startTime = Date.now();
 
